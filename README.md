@@ -13,7 +13,7 @@ Create config files for my theme
 First, build the config files:
 
 ```bash
-yarn biuld
+yarn build
 ```
 
 Then symlink them into the right places.
