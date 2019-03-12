@@ -1,0 +1,15 @@
+{
+  "name": "Theme",
+  "description": "Create config files for my theme",
+  "license": "MIT",
+  "scripts": {
+    "themeit": "themer -c src/colors -t themer-vim -t src/theme_kitty -t src/theme_qutebrowser -t themer-wallpaper-block-wave --themer-wallpaper-block-wave-size 1600x900 -o lib",
+    "svg2png": "( cd lib/themer-wallpaper-block-wave ; for i in *.svg; do cairosvg -o \"${i%.svg}.png\" \"$i\"; done )",
+    "build": "yarn run themeit && yarn run svg2png"
+  },
+  "dependencies": {
+    "themer": "^3.1.6",
+    "themer-vim": "^3.0.2",
+    "themer-wallpaper-block-wave": "^3.0.3"
+  }
+}
